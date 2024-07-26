@@ -14,13 +14,28 @@ public class Move : MonoBehaviour
     public Transform orientation;
     public Transform player;
     public Transform playerObj;
-    public Rigidbody playerRb;
+    Rigidbody playerRb;
 
     // Movement Variables
-    [SerializeField] private float moveSpeed;
+    [Header("Movement")]
+    [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
-    [SerializeField] private float jumpSpeed;
     [SerializeField] private float rotationSpeed;
+
+    // Jump Variables
+    [Header("Jumping")]
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float jumpCooldown;
+    [SerializeField] private float airMultiplier;
+    public KeyCode jumpKey;
+    bool readyToJump = true;
+    //bool readyToDoubleJump = false;
+
+    [Header("Ground Checks")]
+    public float groundDrag;
+    public float playerHeight;
+    public LayerMask groundLayerMask;
+    bool isGrounded;
 
     [Header("Sprite Faces")]
     // Sprite Variables (Might not be applicable)
@@ -30,10 +45,13 @@ public class Move : MonoBehaviour
     [HideInInspector] public Sprite backwardFace;
 
     // Player Variables
-    private CharacterController playerController;
     private Vector3 moveDirection = Vector3.zero;
     [HideInInspector] public bool CanMove = true;
 
+    // Input Variables
+    float changeInX = 0f;
+    float changeInZ = 0f;
+    bool isRunning = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +60,9 @@ public class Move : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        playerController = GetComponent<CharacterController>();
+        //-- Getting Player Rigid Body and locking its rotation --//
+        playerRb = GetComponent<Rigidbody>();
+        playerRb.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -51,24 +71,62 @@ public class Move : MonoBehaviour
         //-- Move based on availability --//
         if (CanMove)
         {
-            //-- Calculating Moving Direction and Speed --//
-            bool IsRunning = Input.GetKey(KeyCode.LeftShift);
-            float ChangeInX = Input.GetAxisRaw("Vertical");
-            float ChangeInZ = Input.GetAxisRaw("Horizontal");
-            Vector3 MovementDirection = new Vector3(ChangeInX, 0, ChangeInZ).normalized;
+            // Ground Check
+            isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundLayerMask);
 
-            Rotate(ChangeInX, ChangeInZ);
-            //Walk(MovementDirection, IsRunning);
+            // Gather Player Inputs
+            PlayerInputs();
+
+            // Control Player Speed
+            SpeedControl();
+
+            //-- Calculating and applying Drag to player --//
+            if (isGrounded)
+            {
+                playerRb.drag = groundDrag;
+            }
+            else
+            {
+                playerRb.drag = 0f;
+            }
         }
     }
 
-    private void Rotate(float x, float z)
+    private void FixedUpdate()
+    {
+        if (CanMove)
+        {
+            //Rotate();
+            Walk();
+        }
+    }
+
+    private void PlayerInputs()
+    {
+        //-- Calculating Moving Direction and Speed --//
+        isRunning = Input.GetKey(KeyCode.LeftShift);
+        changeInX = Input.GetAxisRaw("Vertical");
+        changeInZ = Input.GetAxisRaw("Horizontal");
+        moveDirection = orientation.forward * changeInX + orientation.right * changeInZ;
+
+        //-- Handling Jumping Input --//
+        if (Input.GetKey(jumpKey) && readyToJump && isGrounded)
+        {
+            readyToJump = false;
+
+            Jump(); // PROBLEM! can only jump once. Might be an issue with isGrounded or readyToJump values //
+
+            Invoke(nameof(ResetJump), jumpCooldown);
+        }
+    }
+
+    private void Rotate()
     {
         //-- Rotate Player through the orientation empty obj --//
         Vector3 viewDirection = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
         orientation.forward = viewDirection.normalized;
 
-        Vector3 inputDirection = orientation.forward * x + orientation.right * z;
+        Vector3 inputDirection = orientation.forward * changeInX + orientation.right * changeInZ;
 
         if (inputDirection != Vector3.zero)
         {
@@ -76,31 +134,62 @@ public class Move : MonoBehaviour
         }
     }
 
-    private void Walk(Vector3 Direction, bool IsRunning)
+    private void Walk()
     {
-        //-- Jump on command --//
-        if (Input.GetButton("Jump"))
-        {
-            //Direction += Jump();
-        }
-
         // Movement Speed Calculation
-        float Speed = IsRunning ? runSpeed : moveSpeed;
+        float speed = isRunning ? runSpeed : walkSpeed;
 
-        // Rotation Speed Calculation
-        Quaternion ToRotation = Quaternion.LookRotation(Direction, Vector3.up);
-
-        // Move and Rotate the player
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, ToRotation, rotationSpeed * Time.deltaTime);
-        transform.Translate(Direction * Speed * Time.deltaTime, Space.World);
+        // Move the player (note: 10f is used to have even more speed -> could be merged with speed)
+        if (isGrounded)
+        {
+            playerRb.AddForce(moveDirection.normalized * speed * 10f, ForceMode.Force);
+        }
+        else // In the air movement
+        {
+            playerRb.AddForce(moveDirection.normalized * speed * 10f * airMultiplier, ForceMode.Force);
+        }
     }
 
-    private Vector3 Jump()
+    private void SpeedControl()
     {
-        // Jump
+        Vector3 flatVelocity = new Vector3(playerRb.velocity.x, 0f, playerRb.velocity.z);
 
-        // Double-Jump
-        return Vector3.zero;
+        //-- Control Player Max Speed for Walking or Running --//
+        if (!isRunning)
+        {
+            // Adjust player speed if exceeding max value
+            if (flatVelocity.magnitude > walkSpeed)
+            {
+                Vector3 limitedVelocity = flatVelocity.normalized * walkSpeed;
+                playerRb.velocity = new Vector3(limitedVelocity.x, playerRb.velocity.y, limitedVelocity.z);
+            }
+        }
+        else
+        {
+            // Adjust player speed if exceeding max value
+            if (flatVelocity.magnitude > runSpeed)
+            {
+                Vector3 limitedVelocity = flatVelocity.normalized * runSpeed;
+                playerRb.velocity = new Vector3(limitedVelocity.x, playerRb.velocity.y, limitedVelocity.z);
+            }
+        }
+    }
+
+    private void Jump()
+    {
+        // Reset Y-velocity to ensure consistency in jump height
+        playerRb.velocity = new Vector3(playerRb.velocity.x, 0f, playerRb.velocity.z);
+
+        //-- Jump --//
+        playerRb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        
+
+        //-- Double-Jump --//
+    }
+
+    private void ResetJump()
+    {
+        readyToJump = true;
     }
 
     private void SpriteChanges()

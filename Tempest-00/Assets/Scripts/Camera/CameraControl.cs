@@ -20,9 +20,9 @@ public class CameraControl : MonoBehaviour
     public Transform thirdPersonCameraPosition;
 
     // Camera Availability Variables
-    bool isCameraLocked = false;
-    bool isFirstPerson = true;
-    bool isThirdPerson = false;
+    [HideInInspector] public bool isCameraLocked = false;
+    [HideInInspector] public bool isFirstPerson = true;
+    [HideInInspector] public bool isThirdPerson = false;
 
     // Start is called before the first frame update
     void Start()

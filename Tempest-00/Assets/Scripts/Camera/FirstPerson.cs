@@ -18,11 +18,16 @@ public class FirstPerson : MonoBehaviour
     float yRotation;
 
     // Player Orientation Variable
-    [Header("Player Orientation")]
-    public Transform orientation;
+    [Header("Player and Camera Orientations")]
+    public Transform cameraOrientation;
+    public Transform playerOrientation;
 
     // Player Control Lock Variable
     bool canMove = true;
+
+    // Camera Control Reference
+    [Header("Camera Control")]
+    public CameraControl cameraControl;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +40,7 @@ public class FirstPerson : MonoBehaviour
     void Update()
     {
         //-- Move Player according to movement lock --//
-        if (canMove)
+        if (canMove && cameraControl.isFirstPerson)
         {
             // Mouse input transformation
             float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivityX;
@@ -47,7 +52,7 @@ public class FirstPerson : MonoBehaviour
 
             // Apply rotation to camera and player
             transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-            orientation.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            cameraOrientation.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         }
     }
 }
