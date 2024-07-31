@@ -27,6 +27,7 @@ public class CameraControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //-- Failsafe for cameras in case of missing one --//
         if (firstPersonCamera == null)
         {
             thirdPersonCamera.enabled = true;

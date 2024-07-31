@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Move : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class Move : MonoBehaviour
     bool readyToJump = true;
     //bool readyToDoubleJump = false;
 
+    // Ground Check Variables
     [Header("Ground Checks")]
     public float groundDrag;
     public float playerHeight;
@@ -43,6 +45,14 @@ public class Move : MonoBehaviour
     [HideInInspector] public Sprite backFace;
     [HideInInspector] public Sprite forwardFace;
     [HideInInspector] public Sprite backwardFace;
+
+    // Camera Control Reference
+    [Header("Camera Control")]
+    public CameraControl cameraControl;
+
+    // Debug Variables
+    [Header("Debug")]
+    public Text boolDebugText;
 
     // Player Variables
     private Vector3 moveDirection = Vector3.zero;
@@ -72,7 +82,9 @@ public class Move : MonoBehaviour
         if (CanMove)
         {
             // Ground Check
-            isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundLayerMask);
+            isGrounded = Physics.Raycast(orientation.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundLayerMask);
+            //Debug Ground Check
+            Debug.DrawRay(orientation.position, Vector3.down, Color.green);
 
             // Gather Player Inputs
             PlayerInputs();
@@ -84,10 +96,12 @@ public class Move : MonoBehaviour
             if (isGrounded)
             {
                 playerRb.drag = groundDrag;
+                readyToJump = true;
             }
             else
             {
                 playerRb.drag = 0f;
+                readyToJump = false;
             }
         }
     }
@@ -96,7 +110,7 @@ public class Move : MonoBehaviour
     {
         if (CanMove)
         {
-            //Rotate();
+            Rotate();
             Walk();
         }
     }
@@ -110,27 +124,37 @@ public class Move : MonoBehaviour
         moveDirection = orientation.forward * changeInX + orientation.right * changeInZ;
 
         //-- Handling Jumping Input --//
-        if (Input.GetKey(jumpKey) && readyToJump && isGrounded)
+        if (Input.GetKeyDown(jumpKey) && readyToJump && isGrounded)
         {
             readyToJump = false;
 
             Jump(); // PROBLEM! can only jump once. Might be an issue with isGrounded or readyToJump values //
 
-            Invoke(nameof(ResetJump), jumpCooldown);
+            Invoke("ResetJump", jumpCooldown);
         }
+
+        //-- DEBUG MESSAGES --//
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            
+        }
+        boolDebugText.text = isGrounded.ToString() + "\n" + readyToJump.ToString();
     }
 
     private void Rotate()
     {
-        //-- Rotate Player through the orientation empty obj --//
-        Vector3 viewDirection = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
-        orientation.forward = viewDirection.normalized;
-
-        Vector3 inputDirection = orientation.forward * changeInX + orientation.right * changeInZ;
-
-        if (inputDirection != Vector3.zero)
+        //-- Rotate Player through the orientation empty obj IF in third person mode --//
+        if (cameraControl.isThirdPerson)
         {
-            playerObj.forward = Vector3.Slerp(playerObj.forward, inputDirection.normalized, Time.deltaTime * rotationSpeed);
+            Vector3 viewDirection = playerObj.position - new Vector3(transform.position.x, playerObj.position.y, transform.position.z);
+            orientation.forward = viewDirection.normalized;
+
+            Vector3 inputDirection = orientation.forward * changeInX + orientation.right * changeInZ;
+
+            if (!inputDirection.Equals(Vector3.zero))
+            {
+                playerObj.forward = Vector3.Slerp(playerObj.forward, inputDirection.normalized, Time.deltaTime * rotationSpeed);
+            }
         }
     }
 
