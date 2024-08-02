@@ -15,7 +15,9 @@ public class Move : MonoBehaviour
     public Transform orientation;
     public Transform player;
     public Transform playerObj;
-    Rigidbody playerRb;
+    private Rigidbody playerRb;
+    [SerializeField] private Camera thirdPersonCamera;
+
 
     // Movement Variables
     [Header("Movement")]
@@ -59,8 +61,8 @@ public class Move : MonoBehaviour
     [HideInInspector] public bool CanMove = true;
 
     // Input Variables
-    float changeInX = 0f;
     float changeInZ = 0f;
+    float changeInX = 0f;
     bool isRunning = false;
 
     // Start is called before the first frame update
@@ -119,9 +121,19 @@ public class Move : MonoBehaviour
     {
         //-- Calculating Moving Direction and Speed --//
         isRunning = Input.GetKey(KeyCode.LeftShift);
-        changeInX = Input.GetAxisRaw("Vertical");
-        changeInZ = Input.GetAxisRaw("Horizontal");
-        moveDirection = orientation.forward * changeInX + orientation.right * changeInZ;
+        changeInZ = Input.GetAxisRaw("Vertical");
+        changeInX = Input.GetAxisRaw("Horizontal");
+
+        if (cameraControl.isFirstPerson)
+        {
+            moveDirection = orientation.forward * changeInZ + orientation.right * changeInX;
+        }
+        else 
+        {
+            moveDirection = Quaternion.Euler(0, thirdPersonCamera.transform.eulerAngles.y, 0) * new Vector3(changeInX, 0, changeInZ);
+        }
+
+        moveDirection = moveDirection.normalized;
 
         //-- Handling Jumping Input --//
         if (Input.GetKeyDown(jumpKey) && readyToJump && isGrounded)
@@ -146,14 +158,11 @@ public class Move : MonoBehaviour
         //-- Rotate Player through the orientation empty obj IF in third person mode --//
         if (cameraControl.isThirdPerson)
         {
-            Vector3 viewDirection = playerObj.position - new Vector3(transform.position.x, playerObj.position.y, transform.position.z);
-            orientation.forward = viewDirection.normalized;
-
-            Vector3 inputDirection = orientation.forward * changeInX + orientation.right * changeInZ;
-
-            if (!inputDirection.Equals(Vector3.zero))
+            if (moveDirection != Vector3.zero)
             {
-                playerObj.forward = Vector3.Slerp(playerObj.forward, inputDirection.normalized, Time.deltaTime * rotationSpeed);
+                Quaternion desiredRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+
+                playerObj.rotation = Quaternion.Slerp(playerObj.rotation, desiredRotation, Time.deltaTime * rotationSpeed);
             }
         }
     }
@@ -166,11 +175,11 @@ public class Move : MonoBehaviour
         // Move the player (note: 10f is used to have even more speed -> could be merged with speed)
         if (isGrounded)
         {
-            playerRb.AddForce(moveDirection.normalized * speed * 10f, ForceMode.Force);
+            playerRb.AddForce(moveDirection * speed * 10f, ForceMode.Force);
         }
         else // In the air movement
         {
-            playerRb.AddForce(moveDirection.normalized * speed * 10f * airMultiplier, ForceMode.Force);
+            playerRb.AddForce(moveDirection * speed * 10f * airMultiplier, ForceMode.Force);
         }
     }
 
@@ -209,6 +218,7 @@ public class Move : MonoBehaviour
         
 
         //-- Double-Jump --//
+        /// TODO
     }
 
     private void ResetJump()

@@ -14,15 +14,14 @@ public class CameraControl : MonoBehaviour
     public Camera firstPersonCamera;
     public Camera thirdPersonCamera;
 
-    // Camera Positions
-    [Header("Positions")]
+    // Camera Position
     public Transform firstPersonCameraPosition;
-    public Transform thirdPersonCameraPosition;
 
     // Camera Availability Variables
+    [Header("Camera in Use")]
     [HideInInspector] public bool isCameraLocked = false;
-    [HideInInspector] public bool isFirstPerson = true;
-    [HideInInspector] public bool isThirdPerson = false;
+    public bool isFirstPerson = false;
+    public bool isThirdPerson = true;
 
     // Start is called before the first frame update
     void Start()
@@ -83,10 +82,6 @@ public class CameraControl : MonoBehaviour
         if (isFirstPerson)
         {
             transform.position = firstPersonCameraPosition.position;
-        }
-        else
-        {
-            transform.position = thirdPersonCameraPosition.position;
         }
     }
 }
