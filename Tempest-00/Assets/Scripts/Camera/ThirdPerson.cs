@@ -20,7 +20,7 @@ public class ThirdPerson : MonoBehaviour
     [Header("Camera Settings")]
     [SerializeField] private float distanceFromTarget = 3.0f;
     [SerializeField] private float smoothTime = 0.2f;
-    [SerializeField] private Vector2 rotationXMinMax = new Vector2(-40, 40);
+    [SerializeField] private Vector2 rotationXMinMax = new(-40, 40);
     [SerializeField] private bool invertXAxis = false;
     [SerializeField] private bool invertYAxis = true;
 
@@ -75,7 +75,7 @@ public class ThirdPerson : MonoBehaviour
 
     private void RotateCamera()
     {
-        Vector3 nextRotation = new Vector3(rotationX, rotationY);
+        Vector3 nextRotation = new(rotationX, rotationY);
 
         // Apply damping between rotation changes
         currentRotation = Vector3.SmoothDamp(currentRotation, nextRotation, ref smoothVelocity, smoothTime);
