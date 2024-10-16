@@ -1,0 +1,535 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6413567956301444220
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8981663809581840357, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: LowerHairTail_EndBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -8885337434308106625, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: FrontLeg_ShinBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -8539693593711655683, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8539693593711655683, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8491674880726710961, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Tail_EndBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -7863339059165070985, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: FrontArm_HandBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7274293865145160206, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7274293865145160206, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7000953157349300876, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: FrontArm_ArmBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -6956201237725609514, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: FrontLeg_TighBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -6868996997743731028, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: FrontCape_RightBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -6020074391273943884, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.305
+      objectReference: {fileID: 0}
+    - target: {fileID: -6020074391273943884, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -6020074391273943884, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00028519466
+      objectReference: {fileID: 0}
+    - target: {fileID: -6020074391273943884, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6020074391273943884, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6020074391273943884, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -179.967
+      objectReference: {fileID: 0}
+    - target: {fileID: -5945462351178659698, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Hair
+      objectReference: {fileID: 0}
+    - target: {fileID: -5277423496310769903, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: FrontLeg_FootBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -5139837630983686176, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Tail_RootBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -4469335484672369048, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: UpperHairTail_EndBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -4082568162607258480, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: BackLeg_ShinBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -3595447665192035988, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3595447665192035988, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3263344706565303754, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: BackArm_ForearmBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -3145382201746366490, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Tail_MiddleBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -2892007511537803371, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: BackCape_LeftBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -2658938093725564135, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: UpperHairTail_MiddleBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -2474323272759450224, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: FrontCape_RootBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -2368447750744439876, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0562937
+      objectReference: {fileID: 0}
+    - target: {fileID: -2368447750744439876, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.043032784
+      objectReference: {fileID: 0}
+    - target: {fileID: -2368447750744439876, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00022524595
+      objectReference: {fileID: 0}
+    - target: {fileID: -2368447750744439876, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2368447750744439876, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2368447750744439876, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 179.974
+      objectReference: {fileID: 0}
+    - target: {fileID: -2367759944984239546, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2367759944984239546, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2323024258548401387, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.23820701
+      objectReference: {fileID: 0}
+    - target: {fileID: -2323024258548401387, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07369056
+      objectReference: {fileID: 0}
+    - target: {fileID: -2233516108980587116, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: FrontCape_LeftBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -2093844495798543767, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: -2086394184460930234, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: BackLeg_FootBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -1537200499797996923, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Tail
+      objectReference: {fileID: 0}
+    - target: {fileID: -1459663297936633507, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1459663297936633507, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1251318048036372890, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: BackLeg_TighBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -1024815538560704356, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Head_Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: -735990366097142630, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -735990366097142630, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -130933250339340663, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: BackCape_RootBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -121845867152378520, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Cape_Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 266382095777823687, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Leg_Front
+      objectReference: {fileID: 0}
+    - target: {fileID: 311580695235782034, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5152502
+      objectReference: {fileID: 0}
+    - target: {fileID: 311580695235782034, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03685457
+      objectReference: {fileID: 0}
+    - target: {fileID: 386791141387813222, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: LowerTorso_Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 818139556541040428, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0379845
+      objectReference: {fileID: 0}
+    - target: {fileID: 818139556541040428, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.07358213
+      objectReference: {fileID: 0}
+    - target: {fileID: 904369554684422092, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.010206013
+      objectReference: {fileID: 0}
+    - target: {fileID: 904369554684422092, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29249808
+      objectReference: {fileID: 0}
+    - target: {fileID: 904369554684422092, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.03412853
+      objectReference: {fileID: 0}
+    - target: {fileID: 904369554684422092, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 904369554684422092, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9994174
+      objectReference: {fileID: 0}
+    - target: {fileID: 904369554684422092, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -176.088
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073848721744894439, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70316035
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073848721744894439, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073848721744894439, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073848721744894439, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7110314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073848721744894439, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.638
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459119641201781150, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: BackArm_ArmBone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538136372295466381, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.20475283
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538136372295466381, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.08428387
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539280789391418172, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539280789391418172, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539280789391418172, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.08866499
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539280789391418172, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539280789391418172, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9960615
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539280789391418172, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -169.826
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160388643326181891, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Cape_Front
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293791545072868235, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: BackCape_MiddleBone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2428427081671879773, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: FrontArm_ForearmBone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925214750819805149, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925214750819805149, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3297364353584691495, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: UpperTorso_Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618628450776312985, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618628450776312985, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833328851311043588, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095416580050902612, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: FrontCape_MiddleBone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157741701538757237, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Neck_Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257508509235537429, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257508509235537429, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257508509235537429, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257508509235537429, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257508509235537429, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779355626084031851, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779355626084031851, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789002468609519574, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.71336365
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789002468609519574, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789002468609519574, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789002468609519574, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70079416
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789002468609519574, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 88.982
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794318866337940651, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Arm_Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218212287708164183, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9397045
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218212287708164183, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218212287708164183, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218212287708164183, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.34198755
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218212287708164183, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 39.996
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385190046921404300, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: LowerHairTail_TopBone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5665829355847000359, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5665829355847000359, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795632446533788999, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.019603187
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795632446533788999, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.083205305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417096619343832435, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: BackArm_HandBone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412966904359935913, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: RootHair_Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533711816150980129, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Arm_Front
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581055798709876712, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: BackCape_RightBone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888824856189718116, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: LowerHairTail_MiddleBone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521203558609406325, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_Name
+      value: Leg_Back
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 4843985084834002234, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
