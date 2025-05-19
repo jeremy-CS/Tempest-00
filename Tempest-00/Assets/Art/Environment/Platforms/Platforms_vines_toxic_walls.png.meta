@@ -1,0 +1,422 @@
+fileFormatVersion: 2
+guid: b2d6e29d229e5fe44a4e5f304eca4020
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_0
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 2215
+        width: 1435
+        height: 584
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c51026dbe7d15a4ea9394fbc8b4076e
+      internalID: 1797213962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_1
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1699
+        width: 693
+        height: 1033
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cd22eaae376954ca846204d4b0e95e
+      internalID: -64197258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_2
+      rect:
+        serializedVersion: 2
+        x: 2874
+        y: 1697
+        width: 819
+        height: 1293
+      alignment: 9
+      pivot: {x: 0.35837072, y: 0.35262045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6df2d8532b13a44bcd1756e8f42eec
+      internalID: 1628063482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_3
+      rect:
+        serializedVersion: 2
+        x: 4174
+        y: 2317
+        width: 912
+        height: 587
+      alignment: 9
+      pivot: {x: 0.5408807, y: 0.4364835}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4702906f3707d24a91550887fa579c8
+      internalID: -2024595570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_4
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 318
+        width: 168
+        height: 1689
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975aa1910d9d0e44da25fc6bd5aa84c5
+      internalID: 2107392881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_5
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 783
+        width: 144
+        height: 1065
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bdfb0ac80f41d4cac7ca38a2721300
+      internalID: -306315260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_6
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 889
+        width: 141
+        height: 826
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29cab8f9cac9ece419faf1a9c30325ca
+      internalID: -2129117009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_7
+      rect:
+        serializedVersion: 2
+        x: 4259
+        y: 1582
+        width: 707
+        height: 572
+      alignment: 9
+      pivot: {x: 0.4999993, y: 0.32618234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22e6a4c1e6154a438b6087d09fab8fb
+      internalID: 2021875169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_8
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 506
+        width: 378
+        height: 1055
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1613f3d581652704e8e14e20164314a9
+      internalID: -1632393454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_9
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 546
+        width: 223
+        height: 970
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae07dddd5427d444b8c9a29b299aa2a6
+      internalID: -1312087518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_10
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 390
+        width: 1775
+        height: 956
+      alignment: 9
+      pivot: {x: 0.54434365, y: 0.6949989}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661660bc465298f4eb9148afd6a8c520
+      internalID: 1963153185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_11
+      rect:
+        serializedVersion: 2
+        x: 4519
+        y: 1014
+        width: 234
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd73ac8be40d174da9a26a6dc22cd03
+      internalID: -1384490937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_12
+      rect:
+        serializedVersion: 2
+        x: 4838
+        y: 1101
+        width: 54
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c11c8e149002ff4ab2df8591dcc2924
+      internalID: -552185447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platforms_vines_toxic_walls_13
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 496
+        width: 295
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809b79e3c7d908445966acbaec80a569
+      internalID: -1300418285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Platforms_vines_toxic_walls_0: 1797213962
+      Platforms_vines_toxic_walls_1: -64197258
+      Platforms_vines_toxic_walls_10: 1963153185
+      Platforms_vines_toxic_walls_11: -1384490937
+      Platforms_vines_toxic_walls_12: -552185447
+      Platforms_vines_toxic_walls_13: -1300418285
+      Platforms_vines_toxic_walls_2: 1628063482
+      Platforms_vines_toxic_walls_3: -2024595570
+      Platforms_vines_toxic_walls_4: 2107392881
+      Platforms_vines_toxic_walls_5: -306315260
+      Platforms_vines_toxic_walls_6: -2129117009
+      Platforms_vines_toxic_walls_7: 2021875169
+      Platforms_vines_toxic_walls_8: -1632393454
+      Platforms_vines_toxic_walls_9: -1312087518
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
