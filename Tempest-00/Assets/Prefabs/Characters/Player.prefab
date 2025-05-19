@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9068726630174265963, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -9068726630174265963, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 498100721
+      objectReference: {fileID: 0}
     - target: {fileID: -8981663809581840357, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_Name
       value: LowerHairTail_EndBone
@@ -32,9 +40,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tail_EndBone
       objectReference: {fileID: 0}
+    - target: {fileID: -8036899950623059976, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8036899950623059976, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 498100721
+      objectReference: {fileID: 0}
     - target: {fileID: -7863339059165070985, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_Name
       value: FrontArm_HandBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -7613580466278895605, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7613580466278895605, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 498100721
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_LocalScale.x
@@ -140,13 +164,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tail_RootBone
       objectReference: {fileID: 0}
+    - target: {fileID: -5030867241146498970, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -5030867241146498970, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 498100721
+      objectReference: {fileID: 0}
+    - target: {fileID: -4614395741832679451, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4614395741832679451, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 498100721
+      objectReference: {fileID: 0}
     - target: {fileID: -4469335484672369048, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_Name
       value: UpperHairTail_EndBone
       objectReference: {fileID: 0}
+    - target: {fileID: -4392670873006902675, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4392670873006902675, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 498100721
+      objectReference: {fileID: 0}
     - target: {fileID: -4082568162607258480, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_Name
       value: BackLeg_ShinBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -3982140036739556820, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -3982140036739556820, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 498100721
       objectReference: {fileID: 0}
     - target: {fileID: -3595447665192035988, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_LocalPosition.x
@@ -171,6 +227,14 @@ PrefabInstance:
     - target: {fileID: -2658938093725564135, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_Name
       value: UpperHairTail_MiddleBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -2557988832731924950, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -2557988832731924950, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 498100721
       objectReference: {fileID: 0}
     - target: {fileID: -2474323272759450224, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_Name
@@ -256,6 +320,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: -692370754253080810, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -692370754253080810, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 498100721
+      objectReference: {fileID: 0}
     - target: {fileID: -130933250339340663, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_Name
       value: BackCape_RootBone
@@ -335,6 +407,14 @@ PrefabInstance:
     - target: {fileID: 1459119641201781150, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_Name
       value: BackArm_ArmBone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511091505773887671, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511091505773887671, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 498100721
       objectReference: {fileID: 0}
     - target: {fileID: 1538136372295466381, guid: 616d015f7eee45043bdb3ed26a70f066, type: 3}
       propertyPath: m_LocalPosition.x
