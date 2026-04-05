@@ -1,0 +1,170 @@
+TEMPEST ARCHIVE #001 | MOVEMENT SYSTEM
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	INFORMATION:
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+//////////////////////////////////////////////////////////////////////////////////////
+---> Suggested Structure:
+PlayerController
+├── PlayerInputReader
+├── PlayerStateMachine
+├── CharacterMotor
+├── AbilityManager
+│   ├── JumpAbility
+│   ├── WallJumpAbility
+│   ├── ClimbAbility
+│   ├── CrouchAbility
+│   ├── DashAbility (later)
+│   └── CombatAbility / AttackHandler
+├── Sensors
+│   ├── GroundSensor
+│   ├── WallSensor
+│   ├── ClimbSensor
+│   └── LedgeSensor (later)
+└── PlayerData / Config
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+---> EXPLANATION OF STRUCTURE (Responsibilities of pieces)
+- PlayerController
+	The central orchestrator.
+	It should:
+	> collect input
+	> update sensors
+	> update the current state
+	> let abilities evaluate activation
+	> tell the motor what to do
+	
+	It should not contain all the detailed logic itself.
+
+- CharacterMotor
+	This is one of the most important parts.
+	It should own:
+	> current velocity
+	> facing direction
+	> gravity application
+	> acceleration / deceleration
+	> movement on ground vs air
+	> forced movement impulses
+
+	If you are making a 2D game, this can work with Rigidbody2D.
+	If 3D, then Rigidbody or a custom kinematic controller depending on your needs.
+
+	For responsiveness, many platformers do better with:
+	- explicit velocity control
+	- custom gravity
+	- custom ground checks
+	rather than relying on default physics behavior too much.
+
+- Sensors
+	Do not mix detection logic everywhere.
+	Have dedicated sensor logic for:
+	> grounded
+	> touching wall
+	> climbable surface
+	> ceiling above head
+	> jump pad trigger
+	> interactable enemy/object bounce
+
+	That way your abilities ask simple questions like:
+	- sensors.IsGrounded
+	- sensors.IsOnWall
+	- sensors.CanClimb
+	instead of doing overlap checks in five different scripts.
+
+- State machine
+	Keep it broad.
+	Example:
+public abstract class MovementState
+{
+    public virtual void Enter() { }
+    public virtual void Exit() { }
+    public virtual void UpdateLogic() { }
+    public virtual void UpdatePhysics() { }
+}
+
+	Possible starting states:
+	> GroundedState
+	> AirState
+	> ClimbState
+	> CrouchState
+
+	You can add more later if truly needed.
+
+- Abilities
+	I would make them modular classes, not monolithic methods.
+	Example shape:
+public abstract class PlayerAbility
+{
+    protected PlayerController player;
+
+    public virtual void Initialize(PlayerController player)
+    {
+        this.player = player;
+    }
+
+    public virtual void HandleInput(PlayerInputFrame input) { }
+    public virtual void UpdateAbility() { }
+    public virtual bool CanActivate() => false;
+    public virtual void Activate() { }
+}
+
+	Then concrete abilities:
+	> JumpAbility
+	> WallJumpAbility
+	> ClimbAbility
+	> AttackAbility
+
+	This makes it much easier to expand later.
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	ROADMAP OF TASK:
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+//////////////////////////////////////////////////////////////////////////////////////
+---> Suggested Plan of Action:
+- Phase 1: Core locomotion
+	input snapshot
+	character motor
+	ground detection
+	walk/run
+	jump
+	gravity
+	facing direction
+- Phase 2: Responsiveness layer
+	coyote time
+	jump buffer
+	variable jump height
+	different ground/air acceleration
+- Phase 3: State structure
+	grounded
+	air
+	crouch
+	climb
+- Phase 4: Ability expansion
+	double jump
+	wall jump
+	jump pad / bounce
+	climb movement
+	ledge interactions
+- Phase 5: Combat integration
+	attack buffering
+	air/ground attacks
+	movement locking rules
+	impulse-based attacks
+	cancel rules
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	WHAT TO FIX/ADD:
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+	- 
+ 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//	
+	PROBLEMS/ERRORS TO REPORT:
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+	- 
